@@ -59,7 +59,7 @@ function Login() {
          {/* new add */}
         {/* <h1 id="clickhere"> Don't have account , Click here </h1>
         <button class="btn" onClick={mySignup}>Sign Up</button> */}
-        <h1 id="clickhere">Don't have an account? Please Click here</h1>
+        <h1 id="clickhere">Don't have an account? Click here</h1>
         <button className="btn" onClick={() => navigate("/register")}>Sign Up</button>
 
 
