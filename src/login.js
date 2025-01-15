@@ -45,9 +45,9 @@ function Login() {
         <h1> {currentuser?.email} </h1>
         <h1>Login To Awail Offer</h1>
         <label>Email:</label>
-        <input placeholder="Enter your email" type="text" class="input-field" ref={emailRef} /><br /><br />
+        <input placeholder="Enter your email" type="text" class="input-field" ref={emailRef}  required/><br /><br />
         <label>Password:</label>
-        <input placeholder="Enter your password" type="password" class="input-field" ref={passwordRef} /><br /><br />
+        <input placeholder="Enter your password" type="password" class="input-field" ref={passwordRef} required/><br /><br />
         <div class="button-group">
           
           <button class="btn" onClick={mysignin}>Sign In</button>

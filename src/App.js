@@ -8,6 +8,7 @@ import About from "./about";
 import Hour from "./hours";
 import Login from "./login";
 
+
 //new add
 import Registration from "./registration";
 
@@ -43,7 +44,7 @@ function App (){
         <Route path="online" element={<Online></Online>}></Route>
         <Route path="about" element={<About></About>}></Route>
         <Route path="hour" element={<Hour></Hour>}></Route>
-        <Route path="login" element={<Login></Login>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Registration />} />
       </Routes>
       </Router>
