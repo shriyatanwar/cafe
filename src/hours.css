@@ -1,0 +1,39 @@
+.visitUs{
+    text-align: center;
+
+}
+.location{
+    text-align: center;
+}
+
+
+.branches-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 30px; 
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+.branch {
+    flex: 1; 
+    max-width: 500px; 
+    text-align: center; 
+    padding: 20px;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: rgba(239, 124, 147, 0.295);
+}
+.branchName {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+.branch p {
+    margin: 8px 0;
+    font-size: 1em;
+    color: #555;
+}

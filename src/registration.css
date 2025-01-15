@@ -1,0 +1,81 @@
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./image2.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Style for the registration form box */
+  .registration-box {
+    background: rgb(225, 142, 142);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: #0c0909;
+  }
+  
+  /* Header styling */
+  .registration-box h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form field styling */
+  .registration-box label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left;
+    font-size: 20px;
+  }
+  
+  .registration-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .registration-box input:focus {
+    border-color: #ff7f00;
+    outline: none;
+  }
+  
+  .registration-box button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #2b54a0; 
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .registration-box button:hover {
+    background-color: #d9d2ce;
+  }
+  
+  .registration-box button:disabled {
+    background-color: #a82c2c;
+    cursor: not-allowed;
+  }
+  
+  .registration-box button:last-of-type {
+    background-color: #2b54a0;
+  }
+  
+  .registration-box button:last-of-type:hover {
+    background-color: #d9d2ce;
+  }
