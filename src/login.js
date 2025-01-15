@@ -37,8 +37,7 @@ function Login() {
   }
   async function mysignout() {
     setLoading(true)
-    await logout()
-    
+    await logout()  
   }
   return (
     <div class="login-container">

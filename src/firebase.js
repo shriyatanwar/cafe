@@ -47,6 +47,10 @@ await setDoc(userDoc, {
 return user;
 }
 
+// signin
+export function signin (email,password){
+  return signInWithEmailAndPassword(auth, email,password)
+}
 // active user 
 export function useAuth(){
   const [current,setCurrent]=useState("")
@@ -55,11 +59,6 @@ export function useAuth(){
     return x
   },[])
   return current
-}
-
-// signin
-export function signin (email,password){
-  return signInWithEmailAndPassword(auth, email,password)
 }
 
 //logout
