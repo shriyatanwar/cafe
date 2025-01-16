@@ -11,6 +11,7 @@ import Login from "./login";
 
 //new add
 import Registration from "./registration";
+import Logged from "./success";
 
 
 
@@ -23,8 +24,6 @@ function App (){
         <h3 class="firstLine">Join the Salt’n Pepper club &  get 10% off on your next booking   </h3>
         <button id="login_button"> <Link to="login"> LOGIN </Link> </button>
       </div>
-
-   
 
       <div>
         <h1 class="reshead"> <Link to="/" style={{ textDecoration: 'none',color:'coral' }}>Salt'n Pepper <br></br><span style={{fontSize:'30px'}}>Est. 2001</span></Link></h1>
@@ -46,6 +45,7 @@ function App (){
         <Route path="hour" element={<Hour></Hour>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Registration />} />
+        <Route path="/success" element={<Logged/>}/>
       </Routes>
       </Router>
 

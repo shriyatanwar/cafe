@@ -1,9 +1,10 @@
 import { initializeApp } from "firebase/app";
 import {createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut} from "firebase/auth";
 import { useEffect, useState } from "react";
+// import { Navigate } from "react-router-dom";
 
 // new add for extra details
-import { getFirestore, doc, setDoc } from "firebase/firestore";
+// import { getFirestore, doc, setDoc } from "firebase/firestore";
 
 
 const firebaseConfig = {
@@ -21,30 +22,10 @@ const app = initializeApp(firebaseConfig);
 
 // getAuth()
 const auth = getAuth()
-
-//signup
-
-// export function signup (email, password){
-//     return createUserWithEmailAndPassword(auth,email,password)
-// }
-
-const db = getFirestore(app);
-
-export async function signup(name,mobile,email, password) {
-  const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-  const user = userCredential.user;
-
-const userDoc = doc(db, "users", user.uid);
-await setDoc(userDoc, {
-  email,
-  name,
-  mobile,
-  createdAt: new Date(),
-});
-
-return user;
+// signup
+export function signup (email, password){
+    return createUserWithEmailAndPassword(auth,email,password)
 }
-
 // signin
 export function signin (email,password){
   return signInWithEmailAndPassword(auth, email,password)

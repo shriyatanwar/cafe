@@ -1,5 +1,5 @@
 import "./login.css" 
-// import { signup } from "./firebase";
+
 import { signin } from "./firebase";
 import { logout } from "./firebase";
 import { useAuth } from "./firebase";
@@ -17,19 +17,12 @@ function Login() {
   const passwordRef=useRef()
   const navigate = useNavigate(); 
 
-  // async function mySignup() {
-  //     setLoading (true)
-  //     await signup(emailRef.current.value, passwordRef.current.value)
-  //     setLoading(false)
-  //     alert("Sign Up Successfull")
-  // }
-
-
   async function mysignin() {
     try{
       setLoading(true)
     await signin(emailRef.current.value, passwordRef.current.value)
-    alert("Sign In Successful");
+    alert("Sign In Successful")
+    navigate("/success")
     }
     catch{
       alert("Details incorrect")
@@ -55,10 +48,6 @@ function Login() {
           <button class="btn" onClick={mysignout}>Sign Out</button>
           <br></br> 
         </div>
-
-         {/* new add */}
-        {/* <h1 id="clickhere"> Don't have account , Click here </h1>
-        <button class="btn" onClick={mySignup}>Sign Up</button> */}
         <h1 id="clickhere">Don't have an account? Click here</h1>
         <button className="btn" onClick={() => navigate("/register")}>Sign Up</button>
 
