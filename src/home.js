@@ -14,6 +14,8 @@ function Home(){
       Welcome to Salt'n Pepper, make yourself at home.</h2>
       
         </div>
+
+        
     )
 }
 

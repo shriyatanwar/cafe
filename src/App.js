@@ -9,6 +9,14 @@ import Hour from "./hours";
 import Login from "./login";
 
 
+import peep1 from './peep1.avif'
+import peep2 from './peep2.avif'
+import peep3 from './peep3.avif'
+import peep4 from './peep4.avif'
+import peep5 from './peep5.avif'
+import peep6 from './peep6.avif'
+
+
 //new add
 import Registration from "./registration";
 import Logged from "./success";
@@ -47,6 +55,27 @@ function App (){
         <Route path="/register" element={<Registration />} />
         <Route path="/success" element={<Logged/>}/>
       </Routes>
+
+
+      <div id="momentsS">
+        <h1 id="special"> Special Moments at Salt'n Pepper</h1>
+        <div class="imagepart"> 
+        
+        <img class="imgS" src={peep1}></img>
+        <img class="imgS" src={peep2}></img>
+        <img class="imgS" src={peep3}></img>
+        <img class="imgS" src={peep4}></img>
+        <img class="imgS" src={peep5}></img>
+        <img class="imgS" src={peep6}></img>
+        </div>
+
+      </div>
+      
+      <div> 
+      <footer style={{ background: "yellow", color: "#fff", textAlign: "center", padding: "10px" }}>
+          <p>&copy; 2025 Salt'n Pepper. All rights reserved.</p>
+        </footer>
+        </div>
       </Router>
 
       
