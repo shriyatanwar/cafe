@@ -2,7 +2,9 @@ import image from "./download.png"
 
 function Logged(){
     return(
-        <div>
+        <div style={{
+            background:"brown"
+        }}>
             <center> 
             <h1 class="headinghere"> Welcome to salt n pepper group </h1>
             <h1> Use code "SALTNPEPPER20"</h1>

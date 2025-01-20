@@ -51,6 +51,7 @@ ul li{
   height: 300px;
   margin-top: 10px;
   margin-bottom: 20px;
+  border-radius: 30px;
 }
 .special{
   align-items: center;
@@ -60,5 +61,5 @@ ul li{
 }
 
 .imgS :hover{
-  box-shadow: 5px b;
+  box-shadow: 5px blanchedalmond;
 }

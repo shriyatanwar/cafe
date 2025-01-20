@@ -6,14 +6,19 @@ import Diamond from './image1.jpg'
 function Home(){
     return(
         <div class="body"> 
-            <div>
+        
         <img class="image1" src={Diamond}></img>
-      </div>
-      <h2 class="description"> We believe in the simple pleasures of life.
+
+      <div class="description">
+        <div class="text">  We believe in the simple pleasures of life.
       Good food, fresh ingredients, and awesome vibes.<br></br>
-      Welcome to Salt'n Pepper, make yourself at home.</h2>
+      Welcome to Salt'n Pepper, make yourself at home.
+      </div>
+      </div>
+
+      </div>
+    
       
-        </div>
 
         
     )
