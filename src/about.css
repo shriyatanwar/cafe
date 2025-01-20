@@ -9,4 +9,10 @@
     font-size: x-large;
     text-align: center;
     margin: 60px;
+    padding: 50px;
 }
+.imgAbout {
+    float: left;
+    clip-path: circle(40%);
+    shape-outside: circle(45%);
+  }

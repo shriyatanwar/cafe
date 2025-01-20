@@ -1,10 +1,11 @@
 import "./about.css"
-
+import imgA from './peep5.avif'
 
 function About(){
     return(
         <div class="body">  
             <h1 class="aboutUs"> About us </h1>
+            <img class="imgAbout" src={imgA}></img>
             <p class="aboutInfo">
 Welcome to <strong> Salt n Pepper,</strong> where the rich flavors of Italy come alive on every plate! Nestled at the heart of culinary excellence, we are more than just a restaurant—we are a celebration of authentic Italian cuisine, crafted with love and passion.
 
