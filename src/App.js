@@ -15,7 +15,9 @@ import peep3 from './peep3.avif'
 import peep4 from './peep4.avif'
 import peep5 from './peep5.avif'
 import peep6 from './peep6.avif'
-
+// icon file
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 //new add
 import Registration from "./registration";
@@ -30,7 +32,7 @@ function App (){
       <Router>
       <div id="loginLine"> 
         <h3 class="firstLine">Join the Salt’n Pepper club &  get 10% off on your next booking   </h3>
-        <h3> basket </h3>
+        <FontAwesomeIcon icon={faShoppingCart} size="2x" style={{ color: "white", cursor: "pointer" }} />
         <button id="login_button"> <Link to="login"> LOGIN </Link> </button>
       </div>
 
