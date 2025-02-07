@@ -30,6 +30,7 @@ function App (){
       <Router>
       <div id="loginLine"> 
         <h3 class="firstLine">Join the Salt’n Pepper club &  get 10% off on your next booking   </h3>
+        <h3> basket </h3>
         <button id="login_button"> <Link to="login"> LOGIN </Link> </button>
       </div>
 
