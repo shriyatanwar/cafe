@@ -8,6 +8,7 @@ import About from "./about";
 import Hour from "./hours";
 import Login from "./login";
 
+
 import peep1 from "./peep1.avif";
 import peep2 from "./peep2.avif";
 import peep3 from "./peep3.avif";
@@ -145,7 +146,7 @@ function App() {
         <div>
           <footer
             style={{
-              background: "lavender",
+              background: "lavender ",
               color: "#fff",
               textAlign:"center",
               padding: "10px",
