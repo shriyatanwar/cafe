@@ -26,40 +26,37 @@
 }
 .navBar{
   text-align: center;
+  background-color: bisque;
+  display: flex;
 
 }
 ul li{
   display: inline;
   justify-content: space-between;
-  padding: 20px;
-  font-size: 25px;
+  padding: 10px;
+  font-size: 20px;
   font-style:italic ;
   margin-left: 160px;
  
 }
 .navBar a {
   text-decoration: none;
+  
 }
-.imagepart{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  align-items: center;
-}
-
-.imgS{
-  width: 300px;
-  height: 300px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  border-radius: 30px;
-}
-.special{
-  align-items: center;
-}
-.momentsS{
-  background: rgb(169, 246, 246);
+.nav__itemLineTwo {
+  font-size: 13px;
+  font-weight: 800; 
 }
 
-.imgS :hover{
-  box-shadow: 5px blanchedalmond;
+.nav__itemBasket {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-right: 50px;
+  margin-left: 10px;
+}
+
+.nav__basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
 }

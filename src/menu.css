@@ -1,5 +1,5 @@
 .body{
-    background-color: rgba(236, 200, 173, 0.36);
+    background-color: white;
     width: 100%;
     min-height: 100vh; 
 }
@@ -34,5 +34,5 @@ p{
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
     margin: 10px;
-    background-color: rgba(239, 124, 147, 0.295);
+    background-color: rgba(207, 33, 68, 0.11);
 }
