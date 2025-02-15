@@ -1,0 +1,23 @@
+.imagepart{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+  }
+  
+  .imgS{
+    width: 300px;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+  }
+  .special{
+    align-items: center;
+  }
+  .momentsS{
+    background: rgb(169, 246, 246);
+  }
+  
+  .imgS :hover{
+    box-shadow: 5px blanchedalmond;
+  }
