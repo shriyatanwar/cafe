@@ -30,7 +30,6 @@ body, html {
   margin-right: 20px;
   background: none;
   border: none;
-<<<<<<< HEAD
   padding: 5px 10px;
   align-items: center;
 }
@@ -41,9 +40,7 @@ body, html {
   margin-left: 5px;
 }
 #login_button:hover .guest-text {
-  color: yellow; /* Optional: Change text color on hover */
-=======
->>>>>>> 7c7a9b0d7826b82cfbc111ef9784e8a5907da165
+  color: yellow;
 }
 .reshead{
   text-decoration: none;
