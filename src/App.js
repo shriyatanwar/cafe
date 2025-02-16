@@ -13,6 +13,7 @@ import Special from "./special";
 import Registration from "./registration";
 import Logged from "./success";
 import { CartProvider , useCart} from "./cartContext";
+import BookTable from "./bookTable.js";
 
 // icon file
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -36,8 +37,9 @@ function App() {
           <h3 class="firstLine">
             Join the Salt’n Pepper club & get 10% off on your next booking{" "}
           </h3>
+          
 
-          <a
+          <a class="icons"
             href=" https://www.facebook.com/login/"
             target="_blank"
             rel="noopener noreferrer"
@@ -48,7 +50,7 @@ function App() {
               style={{ color: "white", cursor: "pointer" }}
             />
           </a>
-          <a
+          <a class="icons"
             href="https://x.com/i/flow/login"
             target="_blank"
             rel="noopener noreferrer"
@@ -59,7 +61,7 @@ function App() {
               style={{ color: "white", cursor: "pointer" }}
             />
           </a>
-          <a
+          <a class="icons"
             href="https://www.instagram.com/accounts/login/"
             target="_blank"
             rel="noopener noreferrer"
@@ -70,7 +72,7 @@ function App() {
               style={{ color: "white", cursor: "pointer" }}
             />
           </a>
-          <a
+          <a class="icons"
             href="https://www.linkedin.com/"
             target="_blank"
             rel="noopener noreferrer"
@@ -89,9 +91,10 @@ function App() {
               gap: "5px", // Adds space between icon and number
               color: "white",
               cursor: "pointer",
+              padding:"5px"
             }}
           >
-            <div class="nav__itemBasket">  
+            <div class="nav__itemBasket icons">  
               <FontAwesomeIcon
               icon={faShoppingCart}
               size="lg"
@@ -101,14 +104,16 @@ function App() {
             </div>
           </Link>
 
-          <button id="login_button">
-            <Link to="login">
+          <button id="login_button" >
+          <Link to="login">
               <FontAwesomeIcon
                 icon={faUser}
-                size="lg"
+                bounce
+                size="xl"
                 style={{ color: "black", cursor: "pointer" }}
-              />
+              /> 
             </Link>
+            <span class="guest-text">Hello! Guest</span>
           </button>
         </div>
 
@@ -130,7 +135,7 @@ function App() {
         </div>
 
         <div class=" navBar">
-          <ul class="navBar">
+          <ul>
             <li>
               <Link to="menufile"> Menu</Link>
             </li>
@@ -141,7 +146,9 @@ function App() {
             <li>
               <Link to="/special"> Special Moments</Link>
             </li>
-
+            <li>
+             <Link to="/bookTable" > Book A Table </Link>
+            </li>
             <li>
               <Link to="hour">Hours and Locations</Link>
             </li>
@@ -162,6 +169,7 @@ function App() {
           <Route path="/success" element={<Logged />} />
           <Route path="/cart" element={<Checkout></Checkout>} />
           <Route path="/special" element={<Special></Special>}></Route>
+          <Route path="/bookTable" element={<BookTable></BookTable>}></Route>
         </Routes>
 
         <Footersection></Footersection>

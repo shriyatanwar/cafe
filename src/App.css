@@ -1,15 +1,28 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #loginLine{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  flex-wrap: wrap;
   position: relative;
   background-color: rgb(238, 84, 84);
 }
 .firstLine{
-  margin-left:500px;
+  margin-left:10px;
+  flex-grow: 1;
+  text-align: center;
+ 
 } 
+.icons{
+  padding: 10px;
+}
 #login_button{
+  display: flex;
   height: 40px;
   width: 60px;
   border-radius: 50px;
@@ -17,6 +30,17 @@
   margin-right: 20px;
   background: none;
   border: none;
+  padding: 5px 10px;
+  align-items: center;
+}
+.guest-text {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  margin-left: 5px;
+}
+#login_button:hover .guest-text {
+  color: yellow; /* Optional: Change text color on hover */
 }
 .reshead{
   text-decoration: none;
@@ -30,20 +54,30 @@
   text-align: center;
   background-color: bisque;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  
+  
 
 }
-ul li{
-  display: inline;
-  justify-content: space-between;
-  padding: 10px;
+.navBar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* Makes items wrap on smaller screens */
+  padding: 0;
+}
+
+.navBar ul li {
+  padding: 10px 15px;
+  font-size: 18px;
   font-size: 20px;
   font-style:italic ;
-  margin-left: 160px;
- 
+  justify-content: space-between;
 }
 .navBar a {
   text-decoration: none;
-  
+  color: black;  
 }
 .nav__itemLineTwo {
   font-size: 13px;
@@ -54,11 +88,49 @@ ul li{
   display: flex;
   align-items: center;
   color: white;
-  margin-right: 50px;
+  margin-right: 20px;
   margin-left: 10px;
 }
 
 .nav__basketCount {
   margin-left: 10px;
   margin-right: 10px;
+}
+@media (max-width: 768px) {
+  #loginLine {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .firstLine {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .navBar ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navBar ul li {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .firstLine {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .navBar ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navBar ul li {
+    font-size: 16px;
+    padding: 5px;
+  }
 }
