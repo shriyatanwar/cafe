@@ -10,8 +10,9 @@ import Login from "./login";
 import Checkout from "./checkout";
 import Footersection from "./footer";
 import Special from "./special";
-
-
+import Registration from "./registration";
+import Logged from "./success";
+import { CartProvider , useCart} from "./cartContext";
 
 // icon file
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,14 +24,13 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-//new add
-import Registration from "./registration";
-import Logged from "./success";
+
 function App() {
 
 
   return (
     <div>
+      <CartProvider> 
       <Router>
         <div id="loginLine">
           <h3 class="firstLine">
@@ -97,10 +97,7 @@ function App() {
               size="lg"
               style={{ color: "white", cursor: "pointer" }}
             />
-            <span class="nav__itemLineTwo nav__basketCount"style={{ textDecoration: "none", 
-              fontWeight: "bold" }}>
-              0
-            </span>
+            <CartItemCount />
             </div>
           </Link>
 
@@ -169,7 +166,14 @@ function App() {
 
         <Footersection></Footersection>
       </Router>
+      </CartProvider>
     </div>
   );
 }
+function CartItemCount() {
+  const { cart } = useCart();
+  return <span className="nav__basketCount">{cart.length}</span>;
+}
+
 export default App;
+

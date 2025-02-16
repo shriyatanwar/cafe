@@ -1,3 +1,6 @@
+//tanwarshriya95@gmail.com
+
+
 import { initializeApp } from "firebase/app";
 import {createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut} from "firebase/auth";
 import { useEffect, useState } from "react";

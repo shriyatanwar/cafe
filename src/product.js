@@ -1,7 +1,13 @@
 import React from "react";
 import "./product.css";
+import { useCart } from "./cartContext";
 
 function Product({id,title,price,image, explaination}) {
+    const { addToCart } = useCart(); // Get addToCart from context
+
+    const product = { id, title, price, image, explaination };
+  
+    
     return(
         <div class="product">
 
@@ -11,7 +17,7 @@ function Product({id,title,price,image, explaination}) {
             <p class="product__price">{price}/-</p>
         </div>
         <img src={image}></img>
-        <button> Add to basket</button>
+        <button onClick={() => addToCart(product)}> Add to basket</button>
 </div>
     )
     
