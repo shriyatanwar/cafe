@@ -65,21 +65,21 @@ function BookTable() {
     return (
         <div className="book__table">
             {/* Booking Sections */}
-            <div className="section">
+            <div className="book__section">
                 <h1>Romantic Private Dinner</h1>
                 <p>Experience an unforgettable evening with your loved one in an intimate, candlelit setting.</p>
                 <img className="booking__image" src={photo} alt="Private Dinner" />
                 <br />
                 <button className="bookTable" onClick={() => setShowForm(true)}>Click Here To Book</button>
             </div>
-            <div className="section">
+            <div className="book__section">
                 <h1>Get Together</h1>
                 <p>Gather your friends and family for a delightful dining experience!</p>
                 <img className="booking__image" src={together} alt="Get Together" />
                 <br />
                 <button className="bookTable" onClick={() => setShowForm(true)}>Click Here To Book</button>
             </div>
-            <div className="section">
+            <div className="book__section">
                 <h1>Office Meet-Ups</h1>
                 <p>Host your business meetings and corporate lunches in a relaxed yet professional environment.</p>
                 <img className="booking__image" src={office} alt="Office Meet-Ups" />

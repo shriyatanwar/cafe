@@ -108,12 +108,12 @@ function App() {
           <Link to="login">
               <FontAwesomeIcon
                 icon={faUser}
-                bounce
+                
                 size="xl"
                 style={{ color: "black", cursor: "pointer" }}
               /> 
             </Link>
-            <span class="guest-text">Hello! Guest</span>
+            <span class="guest-text">LogIn</span>
           </button>
         </div>
 

@@ -9,14 +9,14 @@
     width: 300px;
 }
 
-.section {
+.book__section {
     margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
-.section:hover{
+.book__section:hover{
     transform: scale(1.05);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
     filter: brightness(1.1);
