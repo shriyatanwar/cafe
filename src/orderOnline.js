@@ -35,7 +35,7 @@ function Online() {
               explaination="Juicy tomatoes, 
               creamy mozzarella, and fresh basil drizzled 
               with a balsamic glaze."
-              price={581}
+              price={400}
             ></Product>
           </div>
 
@@ -47,7 +47,7 @@ function Online() {
               explaination=" Smoky grilled
                mushrooms marinated
                in herbs and olive oil, served with a garlic aioli."
-              price={581}
+              price={300}
             ></Product>
             <Product
               id="4"
@@ -57,7 +57,7 @@ function Online() {
               arugula, 
               shaved Parmesan, and a drizzle of olive oil 
               and lemon."
-              price={747}
+              price={700}
             ></Product>
           </div>
 
@@ -69,7 +69,7 @@ function Online() {
             explaination="Creamy burrata cheese
               served with heirloom tomatoes, 
               arugula, and a balsamic reduction."
-            price={747}
+            price={800}
             ></Product>
             <Product
             id="6"
@@ -77,7 +77,7 @@ function Online() {
             explaination="Crisp mixed greens, 
             cherry tomatoes, cucumbers, and carrots with
             a house vinaigrette."
-            price={581}
+            price={200}
             image={img8}
             >
             </Product>

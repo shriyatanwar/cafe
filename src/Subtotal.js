@@ -1,7 +1,12 @@
 import "./Subtotal.css";
 import { NumericFormat } from "react-number-format";
+import { useCart } from "./cartContext"; 
 
 function Subtotal() {
+  const { cart } = useCart(); // Get cart from context
+
+  const total = cart.reduce((sum, item) => sum + item.price, 0); 
+
   return (
     <div class="subtotal">  
       <NumericFormat
@@ -12,7 +17,7 @@ function Subtotal() {
         prefix="₹"
         renderText={(value) => (
           <>
-            <p>Subtotal (0 items): <strong>{value}</strong></p>
+             <p>Subtotal ({cart.length} items): <strong>₹{total}</strong></p>
             <small className="subtotal__gift">
               <input type="checkbox" /> This order contains a gift
             </small>
