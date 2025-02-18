@@ -3,13 +3,15 @@ import "./bookTable.css";
 import photo from "./private.jpg";
 import together from "./getTogether.jpg";
 import office from "./office.jpg"; 
-import { db, collection, addDoc } from "./firebase.js";
+import { useAuth } from "./firebase";
 
 function BookTable() {
+    const user = useAuth();
     const today = new Date().toISOString().split("T")[0];
     const [showForm, setShowForm] = useState(false);
     const [showSuccessPopup, setShowSuccessPopup] = useState(false);
     const [showErrorPopup, setShowErrorPopup] = useState(false);
+    const[loginFirstPopUp, setloginFirstPopUp] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
 
     const [formData, setFormData] = useState({
@@ -37,11 +39,18 @@ function BookTable() {
     // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const error = validateForm();
+
+        if (!user) {
+            setloginFirstPopUp(true);
+            return;
+        }
         
+        const error = validateForm();
+
         if (error) {
             setErrorMessage(error); // Combine errors
             setShowErrorPopup(true); // Show error popup
+            return;
         } else {
             setShowForm(false);
             setShowSuccessPopup(true); // Show success popup
@@ -143,6 +152,14 @@ function BookTable() {
                         <p>Your booking has been successfully submitted. We will contact you soon.</p>
                         <button onClick={() => setShowSuccessPopup(false)}>Close</button>
                     </div>
+                </div>
+            )}
+            {loginFirstPopUp && (
+                <div className="success-popup-overlay" onClick={() => setShowSuccessPopup(false)}>
+                    <div className="success-popup-content" onClick={(e) => e.stopPropagation()}>
+                <h2> You must login first to continue with your booking </h2>
+                <button onClick={() => setloginFirstPopUp(false)}>Close</button>
+                </div>
                 </div>
             )}
         </div>

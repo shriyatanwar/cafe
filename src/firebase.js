@@ -4,6 +4,7 @@
 import { initializeApp } from "firebase/app";
 import {createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut} from "firebase/auth";
 import { useEffect, useState } from "react";
+
 // import { Navigate } from "react-router-dom";
 
 // new add for extra details
@@ -25,6 +26,7 @@ const app = initializeApp(firebaseConfig);
 
 // getAuth()
 const auth = getAuth()
+
 // signup
 export function signup (email, password){
     return createUserWithEmailAndPassword(auth,email,password)
