@@ -1,7 +1,7 @@
 import "./login.css" 
 
 import { signin } from "./firebase";
-import { logout } from "./firebase";
+// import { logout } from "./firebase";
 import { useAuth } from "./firebase";
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -29,10 +29,10 @@ function Login() {
     }  
   }
   
-  async function mysignout() {
-    setLoading(true)
-    await logout()  
-  }
+  // async function mysignout() {
+  //   setLoading(true)
+  //   await logout()  
+  // }
   return (
     <div class="login-container">
       <div class="login-box">
@@ -45,7 +45,7 @@ function Login() {
         <div class="button-group">
           
           <button class="btn" onClick={mysignin}>Sign In</button>
-          <button class="btn" onClick={mysignout}>Sign Out</button>
+          {/* <button class="btn" onClick={mysignout}>Sign Out</button> */}
           <br></br> 
         </div>
         <h1 id="clickhere">Don't have an account? Click here</h1>

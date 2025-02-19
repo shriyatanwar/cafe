@@ -46,6 +46,7 @@ function Registration() {
         <input type="password" placeholder="Enter your password" required ref={passwordRef} />
         <label>Confirm Password:</label>
         <input type="password" placeholder="Confirm your password" required ref={confirmPasswordRef} />
+        <p> By creating an account you agree to our Terms & Privacy.</p>
         <button onClick={handleRegister} disabled={loading}>Register</button>
         <button onClick={() => navigate("/login")}>Sign In</button>
       </div>

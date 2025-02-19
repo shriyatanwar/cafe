@@ -1,16 +1,23 @@
 body, html {
   margin: 0;
-  padding: 0;
+  padding-top: 5px;
+
   box-sizing: border-box;
 }
 
+
 #loginLine{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  position: relative;
+
   background-color: rgb(238, 84, 84);
+  z-index: 1000; 
 }
 .firstLine{
   margin-left:10px;
@@ -32,6 +39,17 @@ body, html {
   border: none;
   padding: 5px 10px;
   align-items: center;
+}
+.signout-btn{
+  border-radius: 50px;
+  margin-left: 10px;
+  margin-right: 5px;
+  background-color: yellowgreen;
+}
+.guest-text-f{
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
 }
 .guest-text {
   font-size: 14px;

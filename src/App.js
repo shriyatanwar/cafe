@@ -14,6 +14,9 @@ import Registration from "./registration";
 import Logged from "./success";
 import { CartProvider , useCart} from "./cartContext";
 import BookTable from "./bookTable.js";
+import { useAuth } from "./firebase";
+import { logout } from "./firebase";
+import ProceedPage from "./proceedPage.js";
 
 // icon file
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -27,7 +30,7 @@ import {
 
 
 function App() {
-
+  const currentUser = useAuth();
 
   return (
     <div>
@@ -104,17 +107,19 @@ function App() {
             </div>
           </Link>
 
-          <button id="login_button" >
-          <Link to="login">
-              <FontAwesomeIcon
-                icon={faUser}
-                
-                size="xl"
-                style={{ color: "black", cursor: "pointer" }}
-              /> 
-            </Link>
-            <span class="guest-text">LogIn</span>
-          </button>
+          <button id="login_button">
+              {currentUser ? (
+                <>
+                  <span class="guest-text-f">{currentUser.email.charAt(0).toUpperCase()}</span>
+                  <button onClick={logout} class="signout-btn">Sign Out</button>
+                </>
+              ) : (
+                <Link to="login">
+                  <FontAwesomeIcon icon={faUser} size="xl" style={{ color: "black", cursor: "pointer" }} /> 
+                  <span class="guest-text">LogIn</span>
+                </Link>
+              )}
+            </button>
         </div>
 
         <div>
@@ -170,6 +175,8 @@ function App() {
           <Route path="/cart" element={<Checkout></Checkout>} />
           <Route path="/special" element={<Special></Special>}></Route>
           <Route path="/bookTable" element={<BookTable></BookTable>}></Route>
+          <Route path="/proceedPage" element={<ProceedPage></ProceedPage>}></Route>
+          {/* <Route path="/onlinefood" element={<Online></Online>}></Route> */}
         </Routes>
 
         <Footersection></Footersection>

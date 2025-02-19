@@ -4,11 +4,12 @@ import add from "./add.png";
 import CheckoutProduct from "./CheckoutProduct";
 import Subtotal from "./Subtotal.js";
 import { useCart } from "./cartContext.js";
+import { useNavigate } from "react-router-dom";
 
 
 function Checkout() {
   const { cart, removeFromCart } = useCart(); // Get cart and removeFromCart from context
-
+  const navigate = useNavigate();
   return (
     <div class="checkout">
       <div class="checkout__left">
@@ -21,8 +22,15 @@ function Checkout() {
           }}
         ></img>
         <h2 class="checkout__title"> Your Shopping Basket</h2>
+        
         {cart.length === 0 ? (
+          <div> 
           <p>Your cart is empty</p>
+          <button onClick={() => navigate("/online")} className="checkout-btn">
+            Order Now
+          </button>
+          </div>
+          
         ) : (
           cart.map((item) => (
             <CheckoutProduct key={item.id} {...item} />
