@@ -98,12 +98,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
    ```sh
    npm start
    ```
-
-## 🔑 Firebase Configuration
-1. Create a Firebase project.
-2. Enable Authentication and Realtime Database.
-3. Add your Firebase config to `.env` or directly inside the project.
-
 ## 📢 Future Enhancements
 - ✅ Save booking details to Firebase  
 - ✅ Implement a payment gateway  
