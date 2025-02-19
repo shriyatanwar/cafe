@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# 🍽️ Restaurant Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern restaurant website built with **ReactJS** and **Firebase**, allowing users to order food online, explore restaurant specialties, and manage their cart seamlessly.
 
-## Available Scripts
+## 🚀 Features
+✅ Browse and view restaurant specialties  
+✅ Add items to cart and place orders online  
+✅ Firebase Authentication for secure logins  
+✅ **useContext for Global State Management**  
+✅ **Props for Component Communication**  
+✅ **useState and useEffect for Component State Management**  
+✅ **React Router for Navigation**  
 
-In the project directory, you can run:
+## 🛠️ Technologies Used
+- **ReactJS** ⚛️  
+- **Firebase Authentication** 🔐 
+- **CSS** 🎨  
+- **React Hooks** (useState, useEffect, useContext)  
+- **React Router** 🛤️  
 
-### `npm start`
+## ⚙️ React Concepts Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1️⃣ **useContext for Global State Management**
+- Used `useContext` for managing cart data globally.
+- `cartContext.js` provides the cart state and functions like `addToCart` and `removeFromCart`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```jsx
+// cartContext.js
+import { createContext, useState, useContext } from "react";
 
-### `npm test`
+const CartContext = createContext();
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+export const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
 
-### `npm run build`
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  const removeFromCart = (id) => {
+    setCart(cart.filter((item) => item.id !== id));
+  };
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  return (
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+      {children}
+    </CartContext.Provider>
+  );
+};
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+export const useCart = () => useContext(CartContext);
+```
 
-### `npm run eject`
+### 2️⃣ **Props for Component Communication**
+- `product.js` receives `props` from `orderOnline.js` to display menu items.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```jsx
+// orderOnline.js
+<Product 
+  id="1"
+  image={img3}
+  title="Bruschetta of the Day"
+  explaination="Toasted baguette topped with fresh, seasonal ingredients."
+  price={581}
+/>
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3️⃣ **useState and useEffect for Component State**
+- `useState` is used for handling UI states like loading and form data.
+- `useEffect` is used for fetching data from Firebase.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 4️⃣ **React Router for Navigation**
+- Implemented navigation with `react-router-dom` in `App.js`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```jsx
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-## Learn More
+<Router>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/menu" element={<Menu />} />
+    <Route path="/checkout" element={<Checkout />} />
+  </Routes>
+</Router>
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📌 Installation & Setup
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/yourusername/restaurant-website.git
+   cd restaurant-website
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔑 Firebase Configuration
+1. Create a Firebase project.
+2. Enable Authentication and Realtime Database.
+3. Add your Firebase config to `.env` or directly inside the project.
 
-### Code Splitting
+## 📢 Future Enhancements
+- ✅ Save booking details to Firebase  
+- ✅ Implement a payment gateway  
+- ✅ Add user reviews & ratings  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🤝 Contributing
+Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+💡 **Made with ❤️ by Shriya**
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
