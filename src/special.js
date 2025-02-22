@@ -13,12 +13,12 @@ function Special() {
         <div id="momentsS">
         <h1 id="special"> Special Moments at Salt'n Pepper</h1>
         <div class="imagepart">
-          <img class="imgS" src={peep1}></img>
-          <img class="imgS" src={peep2}></img>
-          <img class="imgS" src={peep3}></img>
-          <img class="imgS" src={peep4}></img>
-          <img class="imgS" src={peep5}></img>
-          <img class="imgS" src={peep6}></img>
+          <img class="imgS" alt="Description of the image" src={peep1}></img>
+          <img class="imgS" alt="Description of the image"  src={peep2}></img>
+          <img class="imgS" alt="Description of the image"  src={peep3}></img>
+          <img class="imgS" alt="Description of the image" src={peep4}></img>
+          <img class="imgS" alt="Description of the image" src={peep5}></img>
+          <img class="imgS" alt="Description of the image" src={peep6}></img>
         </div>
       </div></div>
     )

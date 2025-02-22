@@ -7,7 +7,7 @@ function Home(){
     return(
         <div class="body"> 
         
-        <img class="image1" src={Diamond}></img>
+        <img class="image1" src={Diamond} alt="Description of the image"></img>
 
       <div class="description">
         <div class="text">  We believe in the simple pleasures of life.

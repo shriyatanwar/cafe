@@ -15,7 +15,7 @@ function Checkout() {
       <div class="checkout__left">
         <img
           class="add"
-          src={add}
+          src={add} alt="Description of the image"
           style={{
             width: "70%",
             height: "40%",
