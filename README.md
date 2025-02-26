@@ -1,9 +1,10 @@
 # 🍽️ Restaurant Website
 
-A modern restaurant website built with **ReactJS** and **Firebase**, allowing users to order food online, explore restaurant specialties, and manage their cart seamlessly.
+A modern restaurant website built with **ReactJS** and **Firebase**, allowing users to order food online,book a table ,  explore restaurant specialties, and manage their cart seamlessly.
 
 ## 🚀 Features
-✅ Browse and view restaurant specialties  
+✅ Browse and view restaurant specialties 
+✅ Can book a table 
 ✅ Add items to cart and place orders online  
 ✅ Firebase Authentication for secure logins  
 ✅ **useContext for Global State Management**  
