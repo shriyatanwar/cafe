@@ -19,9 +19,11 @@ function Product({id,title,price,image, explaination}) {
             <p> {explaination}</p>
             <p class="product__price">{price}/-</p>
         </div>
-        <img src={image}></img>
-        <button onClick={() => addToCart(product)}> Add to basket</button>
+        <img class="foodImage"src={image}></img>
+        <div class="buttons"> 
+        <button onClick={() => addToCart(product)}> Add to Cart</button>
         <button onClick={()=> navigate("/cart")}> Go to cart </button>
+        </div>
 </div>
     )
     

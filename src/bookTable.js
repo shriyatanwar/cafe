@@ -102,22 +102,23 @@ function BookTable() {
                     <div className="popup-content" onClick={(e) => e.stopPropagation()}>
                         <h2>Book Your Table</h2>
                         <form onSubmit={handleSubmit}>
-                            <label>Name:</label>
-                            <input type="text" name="name" value={formData.name} onChange={handleChange} />
+                            <label>Name:<span style={{ color: 'red' }}>*</span></label>
+                            
+                            <input type="text" required name="name" value={formData.name} onChange={handleChange} />
 
-                            <label>Email:</label>
+                            <label>Email:<span style={{ color: 'red' }}>*</span></label>
                             <input type="email" name="email" value={formData.email} onChange={handleChange} />
 
-                            <label>Phone:</label>
+                            <label>Phone:<span style={{ color: 'red' }}>*</span></label>
                             <input type="tel" name="phone" value={formData.phone} onChange={handleChange} />
 
-                            <label>Number of Guests:</label>
+                            <label>Number of Guests:<span style={{ color: 'red' }}>*</span></label>
                             <input type="number" name="guests" value={formData.guests} onChange={handleChange} />
 
-                            <label>Date:</label>
+                            <label>Date:<span style={{ color: 'red' }}>*</span></label>
                             <input type="date" name="date" min={today} value={formData.date} onChange={handleChange} />
 
-                            <label>Time:</label>
+                            <label>Time:<span style={{ color: 'red' }}>*</span></label>
                             <input type="time" name="time" value={formData.time} onChange={handleChange} />
 
                             <label>Message (Optional):</label>

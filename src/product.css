@@ -16,21 +16,28 @@
 .product__rating {
   display: flex;
 }
-
-.product > img {
+.foodImage{
+  border-radius: 20px;
   max-height: 200px;
   width: 100%;
   object-fit: contain;
   margin: 20px 0 0 15px;
 }
 
-.product > button {
-  background: #ff9f00;
-  border: 1px solid;
-  margin-top: 10px;
-  border-color: #a88734 #9c7e31 #846a29;
-  color: #111;
-  border-radius: 20px;
+.buttons > button {
+  background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 4px;
+    margin-left: 2px;
+}
+.buttons{
+  display: flex;
+
 }
 button:active {
   background-color: white;

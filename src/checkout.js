@@ -21,7 +21,7 @@ function Checkout() {
             height: "40%",
           }}
         ></img>
-        <h2 class="checkout__title"> Your Shopping Basket</h2>
+        <h2 class="checkout__title"> Your Food Cart</h2>
         
         {cart.length === 0 ? (
           <div> 

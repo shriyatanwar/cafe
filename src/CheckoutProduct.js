@@ -40,7 +40,7 @@ function CheckoutProduct({ id, title, price, image, explaination }) {
         <p class="checkoutProduct__title">{title}</p>
         <p class="checkoutProduct__explaination">{explaination}</p>
         <p class="checkoutProduct__price">{price}/-</p>
-        <button onClick={() => removeFromCart(id)}>Remove from Basket</button>
+        <button onClick={() => removeFromCart(id)}>Remove from Cart</button>
       </div>
     </div>
   );

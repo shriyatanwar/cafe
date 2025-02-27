@@ -17,6 +17,7 @@ import BookTable from "./bookTable.js";
 import { useAuth } from "./firebase";
 import { logout } from "./firebase";
 import ProceedPage from "./proceedPage.js";
+import Reviews from "./reviewSection.js";
 
 // icon file
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -159,8 +160,12 @@ function App() {
             </li>
 
             <li>
-              <Link to="about">About</Link>
+              <Link to="about">About Us</Link>
             </li>
+            <li>
+              <Link to = "review"> Savor the Reviews</Link>
+            </li>
+
           </ul>
         </div>
         <Routes>
@@ -176,6 +181,7 @@ function App() {
           <Route path="/special" element={<Special></Special>}></Route>
           <Route path="/bookTable" element={<BookTable></BookTable>}></Route>
           <Route path="/proceedPage" element={<ProceedPage></ProceedPage>}></Route>
+          <Route path="review" element={<Reviews></Reviews>}></Route>
           {/* <Route path="/onlinefood" element={<Online></Online>}></Route> */}
         </Routes>
 

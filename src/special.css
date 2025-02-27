@@ -1,10 +1,27 @@
+.momentsS{
+  background: linear-gradient(to bottom right, #f7cac9, #92a8d1);;
+  padding: 50px 20px;
+  text-align: center;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+}
+#special {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  text-align: center;
+}
 .imagepart{
     display: grid;
     grid-template-columns: repeat(3, 1fr);;
     gap: 20px;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px;
+    max-width: 1000px; /* Set a fixed width */
+    margin: 0 auto; /* Centers the grid */
+    justify-content: center; /* Ensures equal spacing */
+    padding: 0 20px;
     margin-bottom: 50px;
   }
   
@@ -21,20 +38,8 @@
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
     filter: brightness(1.1);
   }
-  #special {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  .momentsS{
-    background: linear-gradient(to bottom right, #f7cac9, #92a8d1);;
-    padding: 50px 20px;
-    text-align: center;
-    margin-bottom: 50px;
-  }
+
+
   @media (max-width: 768px) {
     .imagepart {
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
