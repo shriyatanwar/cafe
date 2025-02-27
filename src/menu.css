@@ -34,5 +34,11 @@ p{
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
     margin: 10px;
-    background-color: rgba(207, 33, 68, 0.11);
+
+}
+.dish-image{
+    height: 200px;
+    width: 300px;
+    margin-top: 3px;
+    border-radius: 20px;
 }

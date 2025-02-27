@@ -143,7 +143,7 @@ function App() {
         <div class=" navBar">
           <ul>
             <li>
-              <Link to="menufile"> Menu</Link>
+              <Link to="menufile">Our Signature Dishes</Link>
             </li>
             <li>
               <Link to="online">Order Online</Link>

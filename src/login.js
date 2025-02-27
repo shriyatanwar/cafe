@@ -38,9 +38,9 @@ function Login() {
       <div class="login-box">
         <h1> {currentuser?.email} </h1>
         <h1>Login To Awail Offer</h1>
-        <label>Email:</label>
+        <label>Email: <span style={{ color: 'red' }}>*</span></label>
         <input placeholder="Enter your email" type="text" class="input-field" ref={emailRef}  required/><br /><br />
-        <label>Password:</label>
+        <label>Password:<span style={{ color: 'red' }}>*</span></label>
         <input placeholder="Enter your password" type="password" class="input-field" ref={passwordRef} required/><br /><br />
         <div class="button-group">
           

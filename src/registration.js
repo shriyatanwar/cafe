@@ -40,11 +40,11 @@ function Registration() {
       <div className="registration-box">
         <h1>Register Here</h1>
         {/* in input we will pas these useref value using attribute ref */}
-        <label>Email:</label>
+        <label>Email:<span style={{ color: 'red' }}>*</span></label>
         <input type="email" placeholder="Enter your email" required ref={emailRef} />
-        <label>Password:</label>
+        <label>Password:<span style={{ color: 'red' }}>*</span></label>
         <input type="password" placeholder="Enter your password" required ref={passwordRef} />
-        <label>Confirm Password:</label>
+        <label>Confirm Password:<span style={{ color: 'red' }}>*</span></label>
         <input type="password" placeholder="Confirm your password" required ref={confirmPasswordRef} />
         <p> By creating an account you agree to our Terms & Privacy.</p>
         <button onClick={handleRegister} disabled={loading}>Register</button>
