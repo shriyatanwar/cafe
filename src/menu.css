@@ -30,11 +30,7 @@ p{
     font-size: larger;
 }
 .dish{
-    border: 1px solid #ddd; /* Optional: Adds a border */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
     margin: 10px;
-
 }
 .dish-image{
     height: 200px;
