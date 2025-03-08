@@ -3,6 +3,7 @@ body, html {
   padding-top: 5px;
 
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 
@@ -16,7 +17,7 @@ body, html {
   align-items: center;
   flex-wrap: wrap;
 
-  background-color: rgb(238, 84, 84);
+  background-color: rgba(54, 51, 54,255);
   z-index: 1000; 
 }
 .firstLine{
@@ -25,20 +26,44 @@ body, html {
   color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
 } 
-.icons{
-  padding: 10px;
+.icons {
+  margin: 10px;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.4rem;
+  height: 3rem;
+  background-color:#8a898a;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
 }
+
+.icons:hover {
+  transform: scale(1.1);
+  color: rgb(187, 159, 243); 
+}
+
 #login_button{
   display: flex;
-  height: 40px;
-  width: 80px;
-  border-radius: 50px;
-  margin-top: 10px;
-  margin-right: 20px;
- background-color: bisque;
+  height: 3rem;
+  width: 5rem;
+  border-radius: 20px;
+  margin: 10px;
+  background-color:#8a898a;
   border: none;
   padding: 5px 10px;
   align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, color 0.3s ease;
+
+}
+#login_button:hover {
+  transform: scale(1.1);
+  color: rgb(187, 159, 243);
 }
 .signout-btn{
   border-radius: 10px;
@@ -76,7 +101,7 @@ body, html {
 }
 .navBar{
   text-align: center;
-  background-color: bisque;
+  background-color: #9c4769;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

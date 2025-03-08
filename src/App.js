@@ -50,7 +50,7 @@ function App() {
           >
             <FontAwesomeIcon
               icon={faFacebook}
-              size="lg"
+              size="xl"
               style={{ color: "white", cursor: "pointer" }}
             />
           </a>
@@ -61,7 +61,7 @@ function App() {
           >
             <FontAwesomeIcon
               icon={faXTwitter}
-              size="lg"
+              size="xl"
               style={{ color: "white", cursor: "pointer" }}
             />
           </a>
@@ -72,7 +72,7 @@ function App() {
           >
             <FontAwesomeIcon
               icon={faInstagram}
-              size="lg"
+              size="xl"
               style={{ color: "white", cursor: "pointer" }}
             />
           </a>
@@ -83,7 +83,7 @@ function App() {
           >
             <FontAwesomeIcon
               icon={faLinkedin}
-              size="lg"
+              size="xl"
               style={{ color: "white", cursor: "pointer" }}
             />
           </a>
