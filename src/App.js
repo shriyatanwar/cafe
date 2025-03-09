@@ -142,6 +142,9 @@ function App() {
 
         <div class=" navBar">
           <ul>
+          <li>
+              <Link to="/">Home</Link>
+            </li>
             <li>
               <Link to="menufile">Our Signature Dishes</Link>
             </li>
