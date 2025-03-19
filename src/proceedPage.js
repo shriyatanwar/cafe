@@ -1,6 +1,6 @@
 import "./proceedPage.css";
 
-import { useCart } from "./cartContext";
+import { useCart } from "./components/cartContext";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCreditCard, faWallet } from "@fortawesome/free-solid-svg-icons";

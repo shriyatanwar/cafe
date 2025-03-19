@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 function Login() {
   //initial value by usestate
-  const [loading,setLoading]= useState(false)
+  const [setLoading]= useState(false)
 
   const currentuser= useAuth()
   const emailRef= useRef()

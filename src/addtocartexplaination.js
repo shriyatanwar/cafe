@@ -9,55 +9,55 @@
 // useState – Manages the cart state (items added to the cart).
 // useContext – Allows any component to access the cart data without passing props manually.
 
-const CartContext = createContext(); 
+// const CartContext = createContext(); 
 
 // CartContext is our global cart storage.
 // This will hold the cart state, addToCart function, and removeFromCart function.
 // Any component can use this to access the cart anywhere in the app.
 
-export const CartProvider = ({ children }) => { 
+// export const CartProvider = ({ children }) => { 
    
 // CartProvider is a wrapper component that provides cart data to all components inside it.
 // { children } represents any component inside CartProvider, so they can access the cart.
     
-const [cart, setCart] = useState([]); 
+// const [cart, setCart] = useState([]); 
 // cart is an array that stores items added to the cart.
 // setCart is the function used to update the cart state.
 // Initially, cart is an empty array [] (no items added).
 
-const addToCart = (product) => {
-    setCart([...cart, product]);
-  };
+// const addToCart = (product) => {
+//     setCart([...cart, product]);
+//   };
 //   This function adds an item to the cart.
 //   setCart([...cart, product]) → Copies the existing cart and adds the new product to the end.
 //   If a user clicks "Add to Cart," this function is called, updating the cart state.
 
-const removeFromCart = (id) => {
-    setCart(cart.filter((item) => item.id !== id));
-  };
+// const removeFromCart = (id) => {
+//     setCart(cart.filter((item) => item.id !== id));
+//   };
 //   This function removes an item from the cart.
 //   cart.filter((item) => item.id !== id) → Keeps only the items whose ID is not equal to id.
 //   If a user clicks "Remove from Cart," this function removes the item from the cart.
 
-return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
-      {children}
-    </CartContext.Provider>
-  );
-};
-{/* <CartContext.Provider> makes the cart, addToCart, and removeFromCart available to all components inside CartProvider.
+// return (
+//     <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+//       {children}
+//     </CartContext.Provider>
+//   );
+// };
+/* <CartContext.Provider> makes the cart, addToCart, and removeFromCart available to all components inside CartProvider.
 {children} represents all components wrapped inside CartProvider (so they can access cart data).
-Now, any component inside CartProvider can add items, remove items, or read the cart. */}
+Now, any component inside CartProvider can add items, remove items, or read the cart. */
 
-export const useCart = () => {
-    return useContext(CartContext);
-  };
+// export const useCart = () => {
+//     return useContext(CartContext);
+//   };
 //   useCart() is a custom hook that allows any component to easily access cart data.
 //   Instead of writing useContext(CartContext) every time, we can just call useCart().
 
 // Any component can now do:
 
-const { cart, addToCart, removeFromCart } = useCart();
+// const { cart, addToCart, removeFromCart } = useCart();
 // This will give immediate access to the cart and its functions.
 
 //---------------------------------//

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { signup } from "./firebase";
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import "./registration.css"; 
 // useRef reading current value, e.target.value can also be used 
 function Registration() {

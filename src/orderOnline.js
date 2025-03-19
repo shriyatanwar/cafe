@@ -12,7 +12,7 @@ import carbonaraImg from "./chef3.jpg";
 import lasagnaImg from "./chef4.jpg";
 import chickenMarsalaImg from "./chef5.jpg";
 import chefsSelectionImg from "./chef6.jpg";
-import Product from "./product";
+import Product from "./components/product";
 
 function Online() {
   return (
